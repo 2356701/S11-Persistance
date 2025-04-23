@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class Vaisseau : MonoBehaviour
 {
     [SerializeField] private float forceMoteur;
@@ -66,5 +67,9 @@ public class Vaisseau : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(fxExplosion, transform.position, transform.rotation);
+    jeu.TraiterDefaite();
+    
     }
+
+  
 }
